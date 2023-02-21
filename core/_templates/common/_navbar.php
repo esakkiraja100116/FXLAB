@@ -9,7 +9,7 @@
                     </a>
                 </li>
                 <li class="nav-item theme-text">
-                    <a href="index.html" class="nav-link"> EFLAV_ADMIN </a>
+                    <a href="index.html" class="nav-link"> FXLABS</a>
                 </li>
             </ul>
 
@@ -48,7 +48,7 @@
                         <nav class="breadcrumb-one" aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><span>Sales</span></li>
+                                <!-- <li class="breadcrumb-item active" aria-current="page"><span>Sales</span></li> -->
                             </ol>
                         </nav>
 
