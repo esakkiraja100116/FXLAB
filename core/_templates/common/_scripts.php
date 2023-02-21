@@ -76,6 +76,10 @@
         });
     }
 
+    $('.alert-success').delay(2000).fadeOut('medium');
+    $('.alert-danger').delay(2000).fadeOut('medium');
+    $('.alert-primary').delay(2000).fadeOut('medium');
+
     </script>
 
 

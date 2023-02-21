@@ -19,23 +19,52 @@
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Department</label>
 
-                        <select class="form-control" id="exampleFormControlSelect1">
+                        <select class="form-control" id="exampleFormControlSelect1" name="dept" required>
                             <?php
                               $dept = new Unique("department","-");
-                              $dept_name = $dept->getTotal();
-                              console::log($dept_name[0]['name']);
+                              $total = $dept->getTotal();
+                            //   console::log($total[0]['name']);
+                            foreach($total as $key => $values){
+                                ?>
+                            <option value="<?= $values['id']?>"><?=$values['name']?></option>
+                            <?
+                            }
                             ?>
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                          
                         </select>
                     </div>
 
+                    <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Email </label>
+                        <input type="text" name="email" class="form-control" id="inputZip" required>
+                    </div>
+
+
+                    <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Phone </label>
+                        <input type="text" name="phone" class="form-control" id="inputZip" required>
+                    </div>
+
+                    <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Lab</label>
+
+                        <select class="form-control" id="exampleFormControlSelect1" name="lab" required>
+                            <?php
+                              $lab = new Unique("labs","-");
+                              $total = $lab->getTotal();
+                            //   console::log($total[0]['name']);
+                            foreach($total as $key => $values){
+                                ?>
+                            <option value="<?= $values['id']?>"><?=$values['name']?></option>
+                            <?
+                            }
+                            ?>
+                          
+                        </select>
+                    </div>
 
                     <!-- <center> -->
-                        <button type="submit" class="btn  btn-primary mt-3"> Submit </button>
+                    <button type="submit" class="btn  btn-primary mt-3"> Submit </button>
                     <!-- </center> -->
 
                 </form>

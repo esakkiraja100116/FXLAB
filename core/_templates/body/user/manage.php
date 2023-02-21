@@ -31,7 +31,7 @@
                         <td><?= $values['name'] ?></td>
 
                 <?php
-                  $dept = new Unique("department",$values['department']);
+                  $dept = new Unique("department",$values['dept_id']);
                   $dept_name = $dept->getName();
                 ?>
                         <td><?php  echo $dept_name;?></td>
