@@ -10,7 +10,7 @@ function include_all($dir_name){
             // echo "scanning.... ". $dir_n."<br>";
             foreach (glob("$dir_name/$dir_n/*.php") as $filename) {
                 include_once $filename;
-                echo $filename."<br>";
+                // echo $filename."<br>";
             }        }   
     }
 }
