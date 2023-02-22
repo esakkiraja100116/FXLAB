@@ -22,51 +22,62 @@
                         <input type="text" name="leader_name" class="form-control" id="inputZip" required>
                     </div>
 
-                    
 
 
-                
+
+
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Member one</label>
 
                         <select class="form-control" id="member1" onclick="getmember1()" name="member1" required>
-                        <?php
+                            <?php
 
                         $filter_name = unique::get_distinctdata();
                         foreach($filter_name as $key => $values){
 
                             ?>
 
-                        <option value="<?=$values['id']?>"><?=$values['name']?></option>
-                        <?
+                            <option value="<?=$values['id']?>"><?=$values['name']?></option>
+                            <?
                             }
                             ?>
-                          
+
                         </select>
-                       
+
 
                     </div>
 
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Member two</label>
-                                    <select class="form-control" id="member2"  name="member2"
-                                        aria-label="Default select example">
-                                        <option selected>Select member two</option>
-                                     
-                                       
+                        <select class="form-control" id="member2" name="member2" onclick="getmember2()"aria-label="Default select example">
+                            <option selected>Select member two</option>
+                        </select>
+                    </div>
+           
 
-                                    </select>
-                                </div>
-                            </div>
+            <div class="form-group mb-3 md-2">
+                <label for="inputZip">Member three</label>
+                <select class="form-control" id="member3" name="member3" onclick="getmember3()" aria-label="Default select example">
+                    <option selected>Select member three </option>
+                </select>
+            </div>
 
-
-
-                    <!-- <center> -->
-                    <button type="submit" class="btn  btn-primary mt-3"> Submit </button>
-                    <!-- </center> -->
-
-                </form>
+            <div class="form-group mb-3 md-2">
+                <label for="inputZip">Member four</label>
+                <select class="form-control" id="member4" name="member4" aria-label="Default select example">
+                    <option selected>Select member four </option>
+                </select>
             </div>
         </div>
+
+
+
+        <!-- <center> -->
+        <button type="submit" class="btn  btn-primary mt-3"> Submit </button>
+        <!-- </center> -->
+
+        </form>
     </div>
+</div>
+</div>
 </div>

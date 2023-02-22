@@ -119,6 +119,80 @@ function getmember1() {
     });
   
 }
+function getmember2() {
+    // var member_one = document.querySelector('#select1').value;
+    var member_two = $('#member2').val();
+    var member_one = $('#member1').val();
+
+    console.log(member_two);
+    // output =member_one;
+
+    $.ajax({
+        type: "POST",
+        url: "https://nattu.me/FX-LABS/test1.php",
+        dataType: "json",
+        data: {
+            "id_1": member_one,
+            "id_2": member_two,
+
+        },
+        success: function(data) {
+            // var sub_cat_name = data[0].name;
+            // var sub_cat_id = data[0].id;
+
+           console.log(data)
+           var i = 0;
+           var $el = $("#member3");
+           $el.empty(); // remove old options
+                $.each(data, function(key, value) {
+                    // console.log("available s-category :",data[i].name);
+                    $el.append($("<option></option>").attr("value", data[i].id).text(data[i].name));
+                    i++;
+                });
+        },
+        error: function(xhr, status, error) {}
+    });
+  
+}
+function getmember3() {
+    // var member_one = document.querySelector('#select1').value;
+    var member_one = $('#member1').val();
+    var member_two = $('#member2').val();
+    var member_three = $('#member3').val();
+
+
+    console.log(member_two);
+    // output =member_one;
+
+    $.ajax({
+        type: "POST",
+        url: "https://nattu.me/FX-LABS/test2.php",
+        dataType: "json",
+        data: {
+            "id_1": member_one,
+            "id_2": member_two,
+            "id_3": member_three,
+
+
+        },
+        success: function(data) {
+            // var sub_cat_name = data[0].name;
+            // var sub_cat_id = data[0].id;
+
+           console.log(data)
+           var i = 0;
+           var $el = $("#member4");
+           $el.empty(); // remove old options
+                $.each(data, function(key, value) {
+                    // console.log("available s-category :",data[i].name);
+                    $el.append($("<option></option>").attr("value", data[i].id).text(data[i].name));
+                    i++;
+                });
+        },
+        error: function(xhr, status, error) {}
+    });
+  
+}
 
 </script>
 
