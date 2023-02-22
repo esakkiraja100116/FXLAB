@@ -19,7 +19,7 @@
             </li>
 
             <li class="menu">
-                <a href="#dashboard" data-active="true" data-toggle="collapse" <?php if (session::get("current_dir") == "food") { ?> aria-expanded="true" <?php } ?> class="dropdown-toggle">
+                <a href="#dashboard" data-active="true" data-toggle="collapse" <?php if (session::get("current_dir") == "user") { ?> aria-expanded="true" <?php } ?> class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
                             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -44,13 +44,13 @@
                 </ul>
             </li>
             <li class="menu">
-                <a href="#category" data-active="true" data-toggle="collapse"<?php if (session::get("current_dir") == "category") { ?> aria-expanded="true" <?php } ?> class="dropdown-toggle">
+                <a href="#team" data-active="true" data-toggle="collapse"<?php if (session::get("current_dir") == "team") { ?> aria-expanded="true" <?php } ?> class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
                             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                         </svg>
-                        <span>Category</span>
+                        <span>Team</span>
                     </div>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
@@ -58,13 +58,13 @@
                         </svg>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled <?php if (session::get("current_dir") == "category") { ?> show <?php }; ?>" id="category" data-parent="#accordionExample">
+                <ul class="collapse submenu list-unstyled <?php if (session::get("current_dir") == "team") { ?> show <?php }; ?>" id="team" data-parent="#accordionExample">
                     
                     <li>
-                        <a href="https://<?=$domain?>/category/manage.php"> Manage category </a>
+                        <a href="https://<?=$domain?>/team/manage.php"> Manage team </a>
                     </li>
                     <li class="active">
-                        <a href="https://<?=$domain?>/category/add.php"> Add category </a>
+                        <a href="https://<?=$domain?>/team/add.php"> Add team </a>
                     </li>
                 </ul>
             </li>

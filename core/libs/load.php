@@ -1,6 +1,6 @@
 <?php
 
-$dir_name = $_SERVER['DOCUMENT_ROOT']."FXLABS/core/libs";
+$dir_name = $_SERVER['DOCUMENT_ROOT']."FX-LABS/core/libs";
 include_all($dir_name);
 
 function include_all($dir_name){

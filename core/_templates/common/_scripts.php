@@ -13,6 +13,9 @@
 <script src="https://<?= $domain ?>/bootstrap/js/popper.min.js"></script>
 <script src="https://<?= $domain ?>/bootstrap/js/bootstrap.min.js"></script>
 
+<script src="https://<?=$domain?>/plugins/select2/select2.min.js"></script>
+    <script src="https://<?=$domain?>/plugins/select2/custom-select2.js"></script>
+
 <!-- END GLOBAL MANDATORY SCRIPTS -->
 <script src="https://<?= $domain ?>/assets/js/authentication/form-2.js"></script>
 
@@ -80,7 +83,44 @@
     $('.alert-danger').delay(2000).fadeOut('medium');
     $('.alert-primary').delay(2000).fadeOut('medium');
 
+
+
     </script>
+
+<script type="text/javascript">
+function getmember1() {
+    // var member_one = document.querySelector('#select1').value;
+    var member_one = $('#member1').val();
+    console.log(member_one);
+    // output =member_one;
+
+    $.ajax({
+        type: "POST",
+        url: "https://nattu.me/FX-LABS/test.php",
+        dataType: "json",
+        data: {
+            "id": member_one,
+        },
+        success: function(data) {
+            // var sub_cat_name = data[0].name;
+            // var sub_cat_id = data[0].id;
+
+           console.log(data)
+           var i = 0;
+           var $el = $("#member2");
+           $el.empty(); // remove old options
+                $.each(data, function(key, value) {
+                    // console.log("available s-category :",data[i].name);
+                    $el.append($("<option></option>").attr("value", data[i].id).text(data[i].name));
+                    i++;
+                });
+        },
+        error: function(xhr, status, error) {}
+    });
+  
+}
+
+</script>
 
 
 

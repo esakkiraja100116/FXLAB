@@ -1,5 +1,5 @@
 <?php
-$path = $_SERVER['DOCUMENT_ROOT']."/FXLABS/core/";
+$path = $_SERVER['DOCUMENT_ROOT']."/FX-LABS/core/";
 define("GLOBAL_PATH", $path);
 
 class Database

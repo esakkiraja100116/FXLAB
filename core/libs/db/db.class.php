@@ -239,6 +239,20 @@ class Unique
         }
     }
 
+    public static function get_distinctdata()
+    {        
+        // $sql = "SELECT `$table_1.$col_name` FROM `$table_1`
+        // LEFT JOIN `$table_2`
+        // ON `$table_1.$col_name` = `$table_2.$col_name` WHERE `$table_1.$col_name` NOT IN (Select `$table_2.$col_name` from `$table_2`)";
+        // $sql = "SELECT user.name FROM user
+        // LEFT JOIN team
+        // ON user.name = team.name WHERE user.name NOT IN ((SELECT team.user_one from team) AND (SELECT team.user_two from team))";
+        $sql ="SELECT user.id,user.name FROM user
+        LEFT JOIN team
+        ON user.id = team.id WHERE user.name NOT IN (Select team.user_one from team UNION Select team.user_two from team)";
+
+        return unique::get_data(Database::getConnection(),$sql);
+    }
     
 
 }
