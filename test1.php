@@ -3,7 +3,7 @@
 include "core/libs/load.php";
 Session::start();
 
-// print_r($_POST);
+print_r($_POST);
 $id_one = $_POST['id_1'];
 $id_two = $_POST['id_2'];
 
