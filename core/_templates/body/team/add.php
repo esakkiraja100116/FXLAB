@@ -6,7 +6,7 @@
         <div class="statbox widget box box-shadow">
             <p>
             </p>
-            <h5 class="font-weight-bold">Add team</h5>
+            <h5 class="font-weight-bold">Addd team</h5>
             <p></p>
             <div class="widget-content widget-content-area">
                 <form action="" method="POST" enctype="multipart/form-data">
@@ -50,22 +50,22 @@
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Member two</label>
                         <select class="form-control" id="member2" name="member2" onclick="getmember2()"aria-label="Default select example">
-                            <option selected>Select member two</option>
+                            <option value="empty" hidden >Select member two</option>
                         </select>
                     </div>
            
 
             <div class="form-group mb-3 md-2">
                 <label for="inputZip">Member three</label>
-                <select class="form-control" id="member3" name="member3" onclick="getmember3()" aria-label="Default select example">
-                    <option selected>Select member three </option>
+                <select  class="form-control" id="member3" name="member3" onclick="getmember3()" aria-label="Default select example">
+                    <option  value="empty" hidden>Select member three </option>
                 </select>
             </div>
 
             <div class="form-group mb-3 md-2">
                 <label for="inputZip">Member four</label>
                 <select class="form-control" id="member4" name="member4" aria-label="Default select example">
-                    <option selected>Select member four </option>
+                    <option >Select member four </option>
                 </select>
             </div>
         </div>
