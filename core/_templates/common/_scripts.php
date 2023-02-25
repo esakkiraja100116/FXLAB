@@ -193,7 +193,7 @@ function getmember3() {
     });
 }
 else{
-    alert("Please select member 2");
+    alert("Please select member one and two");
 }
 
 }

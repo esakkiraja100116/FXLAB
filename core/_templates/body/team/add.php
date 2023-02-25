@@ -13,7 +13,7 @@
                     <input type="hidden" value="1" name="add">
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Team Name </label>
-                        <input type="text" name="name" class="form-control" id="inputZip" required="">
+                        <input type="text" name="team_name" class="form-control" id="inputZip" required="">
                     </div>
 
                     <div class="form-group mb-3 md-2">
@@ -33,6 +33,9 @@
                             <?php
 
                         $filter_name = unique::get_distinctdata();
+                        // print_r($filter_name);
+                        console::log(var_dump($filter_name));
+
                         foreach($filter_name as $key => $values){
 
                             ?>

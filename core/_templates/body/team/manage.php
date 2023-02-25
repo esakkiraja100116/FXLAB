@@ -8,11 +8,12 @@
             <thead>
                 <tr>
                     <th>Sno</th>
-                    <th>Name</th>
-                    <th>Department</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Labname</th>
+                    <th>Team name</th>
+                    <th>Leader name</th>
+                    <th>Member one</th>
+                    <th>Member two</th>
+                    <th>Member three</th>
+                    <th>Member four</th>
                     <th>Update</th>
                     <th>Delete</th>
 
@@ -21,28 +22,20 @@
             <tbody>
 
                 <?php
-                $user = new Unique("user", "-");
-                $total = $user->getTotal();
+                $team = new Unique("team", "-");
+                $total = $team->getTotal();
                 // print_r($food->getTotal());
                 foreach ($total as $key => $values) {
                 ?>
                     <tr>
                         <td> <?= $key + 1 ?></td>
-                        <td><?= $values['name'] ?></td>
+                        <td><?= $values['team_name'] ?></td>
+                        <td><?= $values['leader_name'] ?></td>
+                        <td><?= $values['user_one'] ?></td>
+                        <td><?= $values['user_two'] ?></td>
+                        <td><?= $values['user_three'] ?></td>
+                        <td><?= $values['user_four'] ?></td>
 
-                <?php
-                  $dept = new Unique("department",$values['dept_id']);
-                  $dept_name = $dept->getName();
-                ?>
-                        <td><?php  echo $dept_name;?></td>
-                        <td><?= $values['email'] ?></td>
-                        <td><?= $values['phone'] ?></td>
-
-                <?php
-                $lab = new Unique("labs",$values['lab_name']);
-                $lab_name = $lab->getName();
-                ?>
-                        <td><?php echo $lab_name;?></td>
 
                      
                         <td><a href="update.php?id=<?php echo $values['id'] ?>"><button class="btn btn-primary btn-rounded mb-2">Update</button></a></td>

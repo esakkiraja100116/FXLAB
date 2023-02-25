@@ -47,5 +47,21 @@ class Alert
           <strong> Action </strong> Done successfully.
         </div>';
   }
+  public static function Mem1()
+  {
+    echo ' 
+        <div class="alert alert-success mb-4" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg> ... </svg></button>
+          <strong> </strong> Select member one !
+        </div>';
+  }
+  public static function Mem2()
+  {
+    echo ' 
+        <div class="alert alert-success mb-4" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg> ... </svg></button>
+          <strong> </strong> Select member two !
+        </div>';
+  }
 
 }
