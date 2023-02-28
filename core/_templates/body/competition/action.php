@@ -5,6 +5,7 @@ $db = new Unique("competition", "-");
 if (isset($_POST['add'])) {
     
     $add_arr = array(
+        
         "name" => Filter::input($_POST['name']),
         "type" => Filter::input($_POST['type']),
         "date" => Filter::input($_POST['date']),
