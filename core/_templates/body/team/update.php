@@ -22,21 +22,18 @@
                     </div>
                     <div class="form-group mt-3 md-2">
                         <label for="inputZip">Leader name </label>
-
                         <input type="text" name="leader_name" value="<?= $team->getLeaderName() ?>" class="form-control" id="inputZip" required="">
                     </div>
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Member one</label>
-
-                        <select class="form-control" id="exampleFormControlSelect1" name="member1" required>
+                        <select class="form-control" id="member1" onclick="getmember1()" name="member1" required>
                             <?php
                              $user_1 = new Unique("user", $team->getUserOne());
                              $u1_id = $user_1->getItem("id", "name", $team->getUserOne());
 
                             ?>
                             <option value="<?php echo $u1_id;?>" selected><?php echo $team->getUserOne() ?></option>
-                            <?php
-                           
+                            <?php                         
                             
                            $filter_name = unique::get_distinctdata();
                            foreach($filter_name as $key => $values){
@@ -53,25 +50,14 @@
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Member two</label>
 
-                        <select class="form-control" id="exampleFormControlSelect1" name="member2" required>
+                        <select class="form-control" id="member2" name="member2" required>
                             <?php
                              $user_2 = new Unique("user", $team->getUserTwo());
                              $u2_id = $user_2->getItem("id", "name", $team->getUserTwo());
 
                             ?>
                             <option value="<?php echo $u2_id;?>" selected><?php echo $team->getUserTwo() ?></option>
-                            <?php
-                           
-                            
-                           $filter_name = unique::get_distinctdata();
-                           foreach($filter_name as $key => $values){
-                            if($values['id'] != $u1_id && $values['id'] != $u2_id){
-                                  ?>
-                               <option value="<?=$values['id']?>"><?=$values['name']?></option>
-                               <?
-                               }
-                            }
-                               ?>
+
                         </select>
                     </div>
 
