@@ -39,7 +39,6 @@
                         foreach($filter_name as $key => $values){
 
                             ?>
-
                             <option value="<?=$values['id']?>"><?=$values['name']?></option>
                             <?
                             }
@@ -52,7 +51,7 @@
 
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Member two</label>
-                        <select class="form-control" id="member2" name="member2" onclick="getmember2()"aria-label="Default select example">
+                        <select class="form-control" id="member2" name="member2" onclick="getmember2()"aria-label="Default select example" required>
                             <option value="empty" hidden >Select member two</option>
                         </select>
                     </div>
@@ -60,14 +59,14 @@
 
             <div class="form-group mb-3 md-2">
                 <label for="inputZip">Member three</label>
-                <select  class="form-control" id="member3" name="member3" onclick="getmember3()" aria-label="Default select example">
+                <select  class="form-control" id="member3" name="member3" onclick="getmember3()" aria-label="Default select example" required>
                     <option  value="empty" hidden>Select member three </option>
                 </select>
             </div>
 
             <div class="form-group mb-3 md-2">
                 <label for="inputZip">Member four</label>
-                <select class="form-control" id="member4" name="member4" aria-label="Default select example">
+                <select class="form-control" id="member4" name="member4" aria-label="Default select example" required>
                     <option >Select member four </option>
                 </select>
             </div>
