@@ -86,10 +86,36 @@
                 <ul class="collapse submenu list-unstyled <?php if (session::get("current_dir") == "competition") { ?> show <?php }; ?>" id="competition" data-parent="#accordionExample">
                     
                     <li>
-                        <a href="https://<?=$domain?>/competition/manage.php"> Manage team </a>
+                        <a href="https://<?=$domain?>/competition/manage.php"> Manage Competition </a>
                     </li>
                     <li class="active">
-                        <a href="https://<?=$domain?>/competition/add.php"> Add team </a>
+                        <a href="https://<?=$domain?>/competition/add.php"> Add Competition </a>
+                    </li>
+                </ul>
+            </li>
+
+             <li class="menu">
+                <a href="#patent" data-active="true" data-toggle="collapse"<?php if (session::get("current_dir") == "patent") { ?> aria-expanded="true" <?php } ?> class="dropdown-toggle">
+                    <div class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                        <span>Patent</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled <?php if (session::get("current_dir") == "patent") { ?> show <?php }; ?>" id="patent" data-parent="#accordionExample">
+                    
+                    <li>
+                        <a href="https://<?=$domain?>/patent/manage.php"> Manage Patent </a>
+                    </li>
+                    <li class="active">
+                        <a href="https://<?=$domain?>/patent/add.php"> Add Patent </a>
                     </li>
                 </ul>
             </li>

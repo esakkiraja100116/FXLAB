@@ -8,12 +8,13 @@
             <thead>
                 <tr>
                     <th>Sno</th>
-                    <th>Team name</th>
-                    <th>Leader name</th>
-                    <th>Member one</th>
-                    <th>Member two</th>
-                    <th>Member three</th>
-                    <th>Member four</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Date</th>
+                    <th>Organizer</th>
+                    <th>Reporting idea</th>
+                    <th>Venue</th>
+                    <th>Review</th>
                     <th>Update</th>
                     <th>Delete</th>
 
@@ -22,19 +23,21 @@
             <tbody>
 
                 <?php
-                $team = new Unique("team", "-");
+                $team = new Unique("competition", "-");
                 $total = $team->getTotal();
                 // print_r($food->getTotal());
                 foreach ($total as $key => $values) {
                 ?>
                     <tr>
                         <td> <?= $key + 1 ?></td>
-                        <td><?= $values['team_name'] ?></td>
-                        <td><?= $values['leader_name'] ?></td>
-                        <td><?= $values['user_one'] ?></td>
-                        <td><?= $values['user_two'] ?></td>
-                        <td><?= $values['user_three'] ?></td>
-                        <td><?= $values['user_four'] ?></td>
+                        <td><?= $values['name'] ?></td>
+                        <td><?= $values['type'] ?></td>
+                        <td><?= $values['date'] ?></td>
+                        <td><?= $values['organizer'] ?></td>
+                        <td><?= $values['reporting_idea'] ?></td>
+                        <td><?= $values['venue'] ?></td>
+                        <td><?= $values['review'] ?></td>
+
 
 
                      
