@@ -1,30 +1,47 @@
 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
     <?php
-   Load::body("competition","action");
+   Load::body("patent","action");
     ?>
     <div class="col">
         <div class="statbox widget box box-shadow">
             <p>
             </p>
-            <h5 class="font-weight-bold">Add competition</h5>
+            <h5 class="font-weight-bold">Add patent</h5>
             <p></p>
             <div class="widget-content widget-content-area">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <input type="hidden" value="1" name="add">
                     <div class="form-group mb-3 md-2">
-                        <label for="inputZip">Name</label>
+                        <label for="inputZip">User_id</label>
 
-                        <input type="text" name="name" class="form-control" id="inputZip" required placeholder="Name of the competition">
+                        <input type="text" name="user_id" class="form-control" id="inputZip" required placeholder="Enter the user_id">
                     </div>
 
                     <div class="form-group mb-3 md-2">
-                        <label for="inputZip">Type</label>
+                        <label for="inputZip">Name</label>
 
-                        <select class="form-control" id="member1" onclick="getmember1()" name="type" required>
-                          <option value="1">National</option>
-                          <option value="2">International</option>
-                          <option value="3">Interlevel</option>
-                          <option value="4">Statelevel</option>
+                        <input type="text" name="name" class="form-control" id="inputZip" required placeholder="Enter the name of the patent">
+                    </div>
+
+                    <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Description</label>
+
+                        <input type="text" name="description" class="form-control" id="inputZip" required placeholder="Enter the description">
+                    </div>
+
+                    <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Reference URL</label>
+
+                        <input type="text" name="ref_url" class="form-control" id="inputZip" required placeholder="Enter the ">
+                    </div>
+
+                    <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Status</label>
+
+                        <select class="form-control" id="member1" name="status" required>
+                          <option value="1">Active</option>
+                          <option value="0">Pending</option>
+                          <option value="2">Rejected</option>
 
                         </select>
 
@@ -32,46 +49,16 @@
                     </div>
 
                     <div class="form-group mb-3 md-2">
-                        <label for="inputZip">Date</label>
+                        <label for="inputZip">Applied_date</label>
 
-                        <input type="date" name="date" class="form-control" id="inputZip" required placeholder="">
-                    </div>
-
-
-                    
-
-
-                    <div class="form-group mb-3 md-2">
-                        <label for="inputZip">Organizer</label>
-
-                        <input type="text" name="org" class="form-control" id="inputZip" required placeholder="Name of the organizer">
+                        <input type="date" name="appl_date" class="form-control" id="inputZip" required placeholder="Applied date">
                     </div>
 
                     <div class="form-group mb-3 md-2">
-                        <label for="inputZip">Reporting idea</label>
+                        <label for="inputZip">Approval_date</label>
 
-                        <textarea type="text" name="report_idea" rows="1" cols="50" class="form-control" id="inputZip" required placeholder="Reporting idea"></textarea>
+                        <input type="date" name="approv_date" class="form-control" id="inputZip" required placeholder="Approval date">
                     </div>
-
-
-                    <div class="form-group mb-3 md-2">
-                        <label for="inputZip">Venue</label>
-
-                        <input type="text" name="venue" class="form-control" id="inputZip" required placeholder="Enter the venue">
-                    </div>
-
-
-                    <div class="form-group mb-3 md-2">
-                        <label for="inputZip">Review</label>
-
-                        <textarea type="text" name="review"rows="1" cols="50" class="form-control" id="inputZip" required placeholder="Review"></textarea>
-                    </div>
-
-                   
-
-
-
-
 
 
         <!-- <center> -->
