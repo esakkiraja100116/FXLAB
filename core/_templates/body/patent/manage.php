@@ -23,20 +23,39 @@
             <tbody>
 
                 <?php
-                $team = new Unique("competition", "-");
+                $team = new Unique("patent", "-");
                 $total = $team->getTotal();
                 // print_r($food->getTotal());
                 foreach ($total as $key => $values) {
                 ?>
                     <tr>
                         <td> <?= $key + 1 ?></td>
+                        <td><?= $values['user_id'] ?></td>
                         <td><?= $values['name'] ?></td>
-                        <td><?= $values['type'] ?></td>
-                        <td><?= $values['date'] ?></td>
-                        <td><?= $values['organizer'] ?></td>
-                        <td><?= $values['reporting_idea'] ?></td>
-                        <td><?= $values['venue'] ?></td>
-                        <td><?= $values['review'] ?></td>
+                        <td><?= $values['desc'] ?></td>
+                        <td><a href="<?= $values['ref_url']?>"  target="_blank"  >Click here</a></td>
+                        <td><?= $values['applied_date'] ?></td>
+                        <td><?= $values['approval_date'] ?></td>
+                       <?php $status = $values['status'];
+                        if($status == '0'){
+                            ?>
+                        <td><span class="badge badge-warning"> pending </span>td>
+                           <?
+                        }
+                        if($status == '1'){
+                            ?>
+                        <td><span class="badge badge-primary"> Active </span></td>
+                           <?
+                        }  if($status == '2'){
+                            ?>
+                        <td><span class="badge badge-danger"> Rejected </span></td>
+                           <?
+                        }
+                       ?>
+                    
+                         
+
+                        
 
 
 
