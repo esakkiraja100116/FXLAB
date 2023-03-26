@@ -39,7 +39,7 @@
                        <?php $status = $values['status'];
                         if($status == '0'){
                             ?>
-                        <td><span class="badge badge-warning"> pending </span>td>
+                        <td><span class="badge badge-warning"> pending </span></td>
                            <?
                         }
                         if($status == '1'){
