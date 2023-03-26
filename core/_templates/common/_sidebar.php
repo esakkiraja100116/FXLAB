@@ -19,7 +19,7 @@
             </li>
 
             <li class="menu">
-                <a href="#dashboard" data-active="true" data-toggle="collapse" <?php if (session::get("current_dir") == "user") { ?> aria-expanded="true" <?php } ?> class="dropdown-toggle">
+                <a href="#user" data-active="true" data-toggle="collapse" <?php if (session::get("current_dir") == "user") { ?> aria-expanded="true" <?php } ?> class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
                             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
@@ -33,7 +33,7 @@
                         </svg>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled <?php if (session::get("current_dir") == "food") { ?> show <?php }; ?>" id="dashboard" data-parent="#accordionExample">
+                <ul class="collapse submenu list-unstyled <?php if (session::get("current_dir") == "user") { ?> show <?php }; ?>" id="user" data-parent="#accordionExample">
                     
                     <li>
                         <a href="https://<?=$domain?>/user/manage.php"> Manage user </a>
