@@ -13,7 +13,12 @@
                     <input type="hidden" value="1" name="add">
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Name </label>
-                        <input type="text" name="name" class="form-control" id="inputZip" required="">
+                        <input type="text" name="name" class="form-control" id="inputZip" required="" placeholder="Eg: John M">
+                    </div>
+
+                    <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Register no</label>
+                        <input type="number" name="register_no" class="form-control" id="inputZip" required="" placeholder="Eg: 95072012001">
                     </div>
 
                     <div class="form-group mb-3 md-2">
@@ -36,13 +41,13 @@
 
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Email </label>
-                        <input type="text" name="email" class="form-control" id="inputZip" required>
+                        <input type="text" name="email" class="form-control" id="inputZip" required placeholder="Eg: john@francisxavier.ac.in">
                     </div>
 
 
                     <div class="form-group mb-3 md-2">
                         <label for="inputZip">Phone </label>
-                        <input type="text" name="phone" class="form-control" id="inputZip" required>
+                        <input type="text" name="phone" class="form-control" id="inputZip" required placeholder="Eg: 8923456454">
                     </div>
 
                     <div class="form-group mb-3 md-2">

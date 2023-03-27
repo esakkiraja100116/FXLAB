@@ -110,8 +110,8 @@ class Unique
 
     public function getTotalBased($col,$value)
     {        
-        $sql = "SELECT * FROM `$this->table_name` WHERE `$col` = '$value' AND `deleted_at` IS NULL;";
-        // echo $sql;
+        $sql = "SELECT * FROM `$this->table_name` WHERE `$col` = '$value' AND `deleted_at` IS NULL ;";
+        echo $sql;
         return unique::get_data(Database::getConnection(),$sql);
     }
 
@@ -140,7 +140,8 @@ class Unique
 
     public function getTotal()
     {        
-        $sql = "SELECT * FROM `$this->table_name`  WHERE `deleted_at` IS NULL ;";
+        $sql = "SELECT * FROM `$this->table_name`  WHERE `deleted_at` IS NULL ORDER BY `id` DESC";
+        console::log($sql);
         return unique::get_data(Database::getConnection(),$sql);
     }
 

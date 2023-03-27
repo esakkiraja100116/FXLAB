@@ -24,6 +24,12 @@
                     </div>
 
                     <div class="form-group mb-3 md-2">
+                        <label for="inputZip">Register no</label>
+
+                        <input type="number" name="reg_no" class="form-control" id="inputZip" required placeholder="Enter the name of the patent">
+                    </div>
+
+                    <div class="form-group mb-3 md-2">
                         <label for="inputZip">Description</label>
 
                         <input type="text" name="description" class="form-control" id="inputZip" required placeholder="Enter the description">

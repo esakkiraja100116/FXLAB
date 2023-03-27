@@ -6,6 +6,7 @@ if (isset($_POST['add'])) {
     
     $add_arr = array(
         "name" => Filter::input($_POST['name']),
+        "register_no" => Filter::input($_POST['register_no']),
         "dept_id" => Filter::input($_POST['dept']),
         "email" => Filter::input($_POST['email']),
         "phone" => Filter::input($_POST['phone']),
